@@ -11,23 +11,28 @@ namespace Csharp_graphical_application
 
     public class Validation
     {
-       
-
-
+        /// <summary>The sobj</summary>
         Shape_Factory sobj = new Shape_Factory();
 
         public int x = 0, y = 0, width, height, radius;
 
+        /// <summary>Resets this instance.</summary>
         public void reset()
         {
             x = 0;
             y = 0;
         }
+        /// <summary>Moves to.</summary>
+        /// <param name="toX">To x.</param>
+        /// <param name="toY">To y.</param>
         public void MoveTo(int toX, int toY)
         {
             x = toX;
             y = toY;
         }
+        /// <summary>Runs the and execute.</summary>
+        /// <param name="g">The g.</param>
+        /// <param name="input">The input.</param>
         public void run_and_execute(Graphics g, string input)
         {
             string command = input.ToLower();

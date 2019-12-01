@@ -10,6 +10,8 @@ namespace Csharp_graphical_application
     public class Circle : Shape
     {
         public int x, y, radius;
+        /// <summary>Draws the specified g.</summary>
+        /// <param name="g">The g.</param>
         public void Draw(Graphics g)
         {
             try
@@ -24,6 +26,11 @@ namespace Csharp_graphical_application
             }
         }
 
+        /// <summary>Sets the parameter.</summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <param name="radius">The radius.</param>
+        /// <param name="_">The .</param>
         public void SetParam(int x, int y, int radius, int _)
         {
             try

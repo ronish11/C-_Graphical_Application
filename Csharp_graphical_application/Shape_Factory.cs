@@ -8,6 +8,9 @@ namespace Csharp_graphical_application
 {
     class Shape_Factory
     {
+        /// <summary>Getshapes the specified shape type.</summary>
+        /// <param name="shapeType">Type of the shape.</param>
+        /// <returns></returns>
         public Shape Getshape(String shapeType)
         {
             shapeType = shapeType.ToUpper().Trim();

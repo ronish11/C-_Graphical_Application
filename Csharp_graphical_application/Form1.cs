@@ -27,12 +27,18 @@ namespace Csharp_graphical_application
             vobj.run_and_execute(g, textBox1.Text);
         }
 
+        /// <summary>Handles the Click event of the aboutToolStripMenuItem control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("GRAPHIHCAL PROGRAMMING APPLICATION \n YAGYA RAJ SHARMA \n Copyright (c) 2019-2020 ALL RIGHTS RESERVED");
 
         }
 
+        /// <summary>Handles the Click event of the saveToolStripMenuItem control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog sf = new SaveFileDialog()
@@ -51,6 +57,9 @@ namespace Csharp_graphical_application
             }
         }
 
+        /// <summary>Handles the Click event of the loadsToolStripMenuItem control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void loadsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog of = new OpenFileDialog())
@@ -65,6 +74,9 @@ namespace Csharp_graphical_application
             }
         }
 
+        /// <summary>Handles the Click event of the button4 control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void button4_Click(object sender, EventArgs e)
         {
             int count = multiline.Lines.Count();
@@ -74,17 +86,26 @@ namespace Csharp_graphical_application
             //}
         }
 
+        /// <summary>Handles the Click event of the button2 control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void button2_Click(object sender, EventArgs e)
         {
             panel1.Refresh();
             
         }
 
+        /// <summary>Handles the Click event of the button3 control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void button3_Click(object sender, EventArgs e)
         {
             vobj.reset();
         }
 
+        /// <summary>Handles the Click event of the button5 control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void button5_Click(object sender, EventArgs e)
         {
             multiline.Clear();
