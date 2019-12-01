@@ -89,5 +89,11 @@
   <ItemGroup>
     <None Include="Resources\background-img-9.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Very-Basic-Info-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
