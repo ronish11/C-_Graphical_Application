@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.multiline = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,13 +44,13 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // multiline
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(572, 41);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(170, 229);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.multiline.Location = new System.Drawing.Point(572, 41);
+            this.multiline.Name = "multiline";
+            this.multiline.Size = new System.Drawing.Size(170, 229);
+            this.multiline.TabIndex = 0;
+            this.multiline.Text = "";
             // 
             // panel1
             // 
@@ -66,7 +66,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(205, 20);
             this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -88,8 +87,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 24);
             this.button2.TabIndex = 4;
-            this.button2.Text = "clear";
+            this.button2.Text = "Clear Panel ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -99,8 +99,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 24);
             this.button3.TabIndex = 5;
-            this.button3.Text = "reset";
+            this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -112,6 +113,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Run";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // menuStrip1
             // 
@@ -131,6 +133,7 @@
             this.loadsToolStripMenuItem.Name = "loadsToolStripMenuItem";
             this.loadsToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.loadsToolStripMenuItem.Text = "Loads";
+            this.loadsToolStripMenuItem.Click += new System.EventHandler(this.loadsToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
@@ -138,6 +141,7 @@
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -146,6 +150,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // button5
             // 
@@ -155,15 +160,16 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(72, 24);
             this.button5.TabIndex = 8;
-            this.button5.Text = "clear";
+            this.button5.Text = "Clear_Text";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_graphical_application.Properties.Resources.background_img_9;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 357);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -171,7 +177,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.multiline);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -186,9 +192,9 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        public  System.Windows.Forms.RichTextBox multiline;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
