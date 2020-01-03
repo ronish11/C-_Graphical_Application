@@ -101,7 +101,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.reset);
             // 
             // button4
             // 
@@ -162,7 +162,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Clear_Text";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.clear);
             // 
             // Form1
             // 

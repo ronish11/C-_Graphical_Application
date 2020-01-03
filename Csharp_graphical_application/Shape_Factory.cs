@@ -37,6 +37,10 @@ namespace Csharp_graphical_application
             {
                 return new Trangle();
             }
+            else if(shapeType.Equals("POLYGON"))
+            {
+                return new Polygon();
+            }
             return null;
         }
     }

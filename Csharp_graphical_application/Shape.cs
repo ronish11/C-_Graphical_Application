@@ -14,5 +14,6 @@ namespace Csharp_graphical_application
         /// <param name="g">The g.</param>
         void Draw(Graphics g);
         void SetParam(int x, int y, int width, int height); // add color 
+
     }
 }

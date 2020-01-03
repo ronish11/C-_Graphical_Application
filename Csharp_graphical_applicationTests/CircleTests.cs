@@ -23,9 +23,9 @@ namespace Csharp_graphical_application.Tests
             int y = 85;
 
             /// act
-            rec_obj.SetParam(x, y, 45, 89);
+            rec_obj.SetParam(x, y, 45,45);
             /// assert
-            Assert.AreEqual(x, rec_obj.x);
+            Assert.AreEqual(25, rec_obj.x);
             Assert.AreEqual(y, rec_obj.y);
         }
     }

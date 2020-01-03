@@ -11,13 +11,15 @@ namespace Csharp_graphical_application
 
     public class Validation
     {
+        String[] a = { };
         /// <summary>The sobj</summary>
         Shape_Factory sobj = new Shape_Factory();
+
 
         public int x = 0, y = 0, width, height, radius;
 
         /// <summary>Resets this instance.</summary>
-        public void reset()
+        public void reset() // moves the pen position to given x and y co-ordinate
         {
             x = 0;
             y = 0;
@@ -35,21 +37,36 @@ namespace Csharp_graphical_application
         /// <param name="input">The input.</param>
         public void run_and_execute(Graphics g, string input)
         {
-            string command = input.ToLower();
+            string command = input.ToLower(); // Cirlce 50 = circle 50
 
+            //drawto 50 - first element
+            //circle 50 - second element
             string[] commandline = command.Split(new String[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            string check_speling = command.Split(' ')[0] .ToLower();
+
+            
+
+            string[] a = { "circle", "trangle", "moveto", "drawto", "rectangle","polygon"};
+                if (!a.Contains(check_speling))
+                {
+
+                 MessageBox.Show("error");
+                return;
+                }
+            
+
 
             for (int k = 0; k < commandline.Length; k++)
             {
-
-                string[] cmd = commandline[k].Split(' ');
+                string[] cmd = commandline[k].Split(' '); //drawto - first element // 50 - second element
                 if (cmd.Length != 2)
                 {
                     MessageBox.Show("Incorrect Parameter");
                 }
-                if (cmd[0].Equals("moveto") == true)
+                if (cmd[0].Equals("moveto") == true) // moveto 50,60
                 {
-                    string[] param = cmd[1].Split(',');
+                    string[] param = cmd[1].Split(',');// 50 60
 
                     if (param.Length != 2)
                     {
@@ -71,13 +88,28 @@ namespace Csharp_graphical_application
                 {
                     string[] param = cmd[1].Split(',');
                     int toX = 0, toY = 0;
-                    if (param.Length != 2)
-                    {
-                        MessageBox.Show("Incorrect Parameter");
 
+                    bool valid = false;
+                    foreach (var item in param)
+                    {
+
+                        valid = Int32.TryParse(item, out _); //converts to integer
                     }
+
+                    if (!valid)
+                    {
+                        MessageBox.Show("Error: Invalid Parameter");
+                    }
+
+                    else if (param.Length != 2)
+                    {
+                        MessageBox.Show("Error: parimeter on lenght & breath");
+
+                    }                
+                   
                     else
                     {
+                        //validaton
                         Int32.TryParse(param[0], out toX);
                         Int32.TryParse(param[1], out toY);
                         Shape line = sobj.Getshape("line");
@@ -91,17 +123,31 @@ namespace Csharp_graphical_application
 
                 else if (cmd[0].Equals("circle") == true)
                 {
-                    if (cmd.Length != 2)
+                    string[] param = cmd[1].Split(',');
+                    bool valid = false;
+                    foreach (var item in param)
                     {
-                        MessageBox.Show("Incorrect Parameter");
+
+                        valid = Int32.TryParse(item, out _); //converts to integer
+                    }
+
+                    if (!valid)
+                    {
+                        MessageBox.Show("Error: Invalid Parameter");
+                    }
+
+                    else if (param.Length != 1)
+                    {
+                        MessageBox.Show("Error: parimeter on lenght & breath");
 
                     }
+                    
                     else
                     {
 
                         Int32.TryParse(cmd[1], out radius);
-                        Shape circle = sobj.Getshape("circle");
-                        Circle c = new Circle();
+                        Shape c = sobj.Getshape("circle");
+                        //Circle c = new Circle();
                         c.SetParam(x, y, radius, 0);
                         c.Draw(g);
                        
@@ -111,45 +157,103 @@ namespace Csharp_graphical_application
                 }
                 else if (cmd[0].Equals("rectangle") == true)
                 {
-                    if (cmd.Length < 2)
+
+                    string[] param = cmd[1].Split(',');
+                    bool valid = false;
+                    foreach (var item in param)
                     {
-                        MessageBox.Show("Invalid Parameter ");
+
+                        valid = Int32.TryParse(item, out _); //converts to integer
                     }
+
+                    if (!valid)
+                    {
+                        MessageBox.Show("Error: Invalid Parameter");
+                    }
+
+                    else if (param.Length != 2)
+                    {
+                        MessageBox.Show("Error: parimeter on lenght & breath");
+
+                    }
+
                     else
                     {
-                        string[] param = cmd[1].Split(',');
-                        if (param.Length < 2)
-                        {
-                            MessageBox.Show("Invalid Parameter ");
-                        }
-                        else
-                        {
-                            Int32.TryParse(param[0], out width);
-                            Int32.TryParse(param[1], out height);
-                            Shape circle = sobj.Getshape("rectangle");
-                            Rectangle r = new Rectangle();
-                            r.SetParam(x, y, width, height);
-                            r.Draw(g);
-                            x += width;
-                            y += height;
-                        }
+                        Int32.TryParse(param[0], out width);
+                        Int32.TryParse(param[1], out height);
+                        Shape r = sobj.Getshape("rectangle");
+                        //Rectangle r = new Rectangle();
+                        r.SetParam(x, y, width, height);
+                        r.Draw(g);
+                        x += width;
+                        y += height;
                     }
-                }
+
+                    }
+                
                 else if (cmd[0].Equals("trangle") == true)
                 {
                     string[] param = cmd[1].Split(',');
-                    if (param.Length != 2)
+                    int toX = 0, toY = 0;
+
+                    bool valid = false;
+                    foreach (var item in param)
                     {
-                        MessageBox.Show("Incorrect Parameter");
+
+                        valid = Int32.TryParse(item, out _); //converts to integer
+                    }
+
+                    if (!valid)
+                    {
+                        MessageBox.Show("Error: Invalid Parameter");
+                    }
+
+                    else if (param.Length != 3)
+                    {
+                        MessageBox.Show("Error: parimeter on lenght & breath");
 
                     }
+
                     else
                     {
-
                         Int32.TryParse(param[0], out width);
                         Int32.TryParse(param[1], out height);
-                        Shape circle = sobj.Getshape("trangle");
-                        Trangle r = new Trangle();
+                        Shape t = sobj.Getshape("trangle");
+                        //Trangle r = new Trangle();
+                        t.SetParam(x, y, width, height);
+                        t.Draw(g);
+                        x += width;
+                        y += height;
+                    }
+
+                }
+                else if (cmd[0].Equals("polygon") == true)
+                {
+
+                    string[] param = cmd[1].Split(',');
+                    bool valid = false;
+                    foreach (var item in param)
+                    {
+
+                        valid = Int32.TryParse(item, out _); //converts to integer
+                    }
+
+                    if (!valid)
+                    {
+                        MessageBox.Show("Error: Invalid Parameter");
+                    }
+
+                    else if (param.Length != 4)
+                    {
+                        MessageBox.Show("Error: parimeter on lenght & breath");
+
+                    }
+
+                    else
+                    {
+                        Int32.TryParse(param[0], out width);
+                        Int32.TryParse(param[1], out height);
+                        Shape r = sobj.Getshape("polygon");
                         r.SetParam(x, y, width, height);
                         r.Draw(g);
                         x += width;

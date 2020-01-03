@@ -98,7 +98,7 @@ namespace Csharp_graphical_application
         /// <summary>Handles the Click event of the button3 control.</summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void button3_Click(object sender, EventArgs e)
+        private void reset(object sender, EventArgs e)
         {
             vobj.reset();
         }
@@ -106,7 +106,7 @@ namespace Csharp_graphical_application
         /// <summary>Handles the Click event of the button5 control.</summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void button5_Click(object sender, EventArgs e)
+        private void clear(object sender, EventArgs e)
         {
             multiline.Clear();
             textBox1.Clear();

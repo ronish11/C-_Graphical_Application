@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace Csharp_graphical_application
 {
-    public class Rectangle : Shape
+    class Polygon : Shape
     {
-        public int  x, y,  width,  height;
-        /// <summary>Draws the specified g.</summary>
-        /// <param name="g">The g.</param>
+        public int x, y, width, height;
         public void Draw(Graphics g)
         {
             try
             {
                 Pen p = new Pen(Color.Black);
-                g.DrawRectangle(p, x - (width / 2), y - (height / 2), width * 2, height * 2);
+                Point[] a = { new Point(x, y), new Point(x * 2, y * 2), new Point(x * 3, x * 3), new Point(x * 2, y * 1) };
+                g.DrawPolygon(p, a);
             }
             catch (Exception ex)
             {
@@ -26,11 +25,6 @@ namespace Csharp_graphical_application
             }
         }
 
-        /// <summary>Sets the parameter.</summary>
-        /// <param name="x">The x.</param>
-        /// <param name="y">The y.</param>
-        /// <param name="width">The width.</param>
-        /// <param name="height">The height.</param>
         public void SetParam(int x, int y, int width, int height)
         {
             try
@@ -45,7 +39,7 @@ namespace Csharp_graphical_application
 
                 throw ex;
             }
-            
         }
+
     }
 }
