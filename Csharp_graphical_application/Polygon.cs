@@ -10,6 +10,7 @@ namespace Csharp_graphical_application
     class Polygon : Shape
     {
         public int x, y, width, height;
+        public int a, b, c, d, e, f, g, h, i, j, k, l, m;
         public void Draw(Graphics g)
         {
             try
@@ -42,14 +43,23 @@ namespace Csharp_graphical_application
         }
 
 
-        public void set(params int[] list)
+        public void set_poly(params int[] list)
         {
             try
             {
-                this.x = x;
-                this.y = y;
-                this.width = width;
-                this.height = height;
+                list[0]= a;
+                list[1] = b;
+                list[2] = c;
+                list[3] = d;
+                list[4] = e;
+                list[5] = f;
+                list[6] = g;
+                list[7] = h;
+                list[8] = i;
+                list[9] = j;
+                list[10] = k;
+                list[11] = l;
+                list[12] = m;
             }
             catch (Exception ex)
             {
