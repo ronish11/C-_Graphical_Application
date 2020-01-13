@@ -243,7 +243,7 @@ namespace Csharp_graphical_application
                         MessageBox.Show("Error: Invalid Parameter");
                     }
 
-                    else if (param.Length != 4)
+                    else if (param.Length != 12)
                     {
                         MessageBox.Show("Error: parimeter on lenght & breath");
 

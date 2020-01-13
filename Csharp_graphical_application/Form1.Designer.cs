@@ -46,9 +46,9 @@
             // 
             // multiline
             // 
-            this.multiline.Location = new System.Drawing.Point(572, 41);
+            this.multiline.Location = new System.Drawing.Point(801, 41);
             this.multiline.Name = "multiline";
-            this.multiline.Size = new System.Drawing.Size(170, 229);
+            this.multiline.Size = new System.Drawing.Size(170, 270);
             this.multiline.TabIndex = 0;
             this.multiline.Text = "";
             // 
@@ -57,12 +57,13 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Location = new System.Drawing.Point(12, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 229);
+            this.panel1.Size = new System.Drawing.Size(774, 353);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 290);
+            this.textBox1.Location = new System.Drawing.Point(12, 413);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(205, 20);
             this.textBox1.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(12, 316);
+            this.button1.Location = new System.Drawing.Point(12, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 24);
             this.button1.TabIndex = 3;
@@ -83,7 +84,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(288, 290);
+            this.button2.Location = new System.Drawing.Point(618, 410);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 24);
             this.button2.TabIndex = 4;
@@ -95,7 +96,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(366, 290);
+            this.button3.Location = new System.Drawing.Point(711, 409);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 24);
             this.button3.TabIndex = 5;
@@ -107,7 +108,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(572, 276);
+            this.button4.Location = new System.Drawing.Point(801, 317);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 24);
             this.button4.TabIndex = 6;
@@ -123,7 +124,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(991, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -156,7 +157,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(670, 276);
+            this.button5.Location = new System.Drawing.Point(899, 317);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(72, 24);
             this.button5.TabIndex = 8;
@@ -169,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_graphical_application.Properties.Resources.background_img_9;
-            this.ClientSize = new System.Drawing.Size(800, 357);
+            this.ClientSize = new System.Drawing.Size(991, 467);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
