@@ -19,6 +19,7 @@ namespace Csharp_graphical_application
             try
             {
                 Pen p = new Pen(Color.Black);
+                //jj
                  //new Point(y,x), , ,
                 //, , };
 
