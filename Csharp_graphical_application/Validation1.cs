@@ -10,7 +10,7 @@ namespace Csharp_graphical_application
 {
     class Validation1
     {
-        private TextBox multiline;
+        private RichTextBox txtCommand;
         public Boolean isValidCommand = true;
         public Boolean isSomethingInvalid = false;
         public int Raduis = 0;
@@ -26,16 +26,16 @@ namespace Csharp_graphical_application
         public Boolean hasEndif = false;
 
         public int loopLineNo = 0, endLoopLineNo = 0, ifLineNo = 0, endIfLineNo = 0;
-        private RichTextBox multiline1;
+        private RichTextBox multiline;
 
-        public Validation1(TextBox multiline)
+        public Validation1(RichTextBox txtCommand)
         {
-            this.multiline = multiline;
+            this.txtCommand = txtCommand;
 
-            int numberOfLines = multiline.Lines.Length;
+            int numberOfLines = txtCommand.Lines.Length;
             for (int i = 0; i < numberOfLines; i++)
             {
-                String oneLineCommand = multiline.Lines[i];
+                String oneLineCommand = txtCommand.Lines[i];
                 oneLineCommand = oneLineCommand.Trim();
                 if (!oneLineCommand.Equals(""))
                 {
@@ -56,22 +56,22 @@ namespace Csharp_graphical_application
             }
         }
 
-        public Validation1(RichTextBox multiline1)
-        {
-            this.multiline1 = multiline1;
-        }
+        //public Validation1(RichTextBox multiline)
+        //{
+        //    this.multiline = multiline;
+        //}
 
         /// <summary>
         /// function to check loop and if validation
         /// </summary>
         public void checkLoopAndIfValidation()
         {
-            int numberOfLines = multiline.Lines.Length;
+            int numberOfLines = txtCommand.Lines.Length;
 
 
             for (int i = 0; i < numberOfLines; i++)
             {
-                String oneLineCommand = multiline.Lines[i];
+                String oneLineCommand = txtCommand.Lines[i];
                 oneLineCommand = oneLineCommand.Trim();
                 if (!oneLineCommand.Equals(""))
                 {
@@ -540,13 +540,13 @@ namespace Csharp_graphical_application
         public void checkIfVariableDefined(string variable)
         {
             Boolean isVaraibleFound = false;
-            if (multiline.Lines.Length > 1)
+            if (txtCommand.Lines.Length > 1)
             {
                 if (lineNumber > 0)
                 {
                     for (int i = 0; i < lineNumber; i++)
                     {
-                        String oneLineCommand = multiline.Lines[i];
+                        String oneLineCommand = txtCommand.Lines[i];
                         oneLineCommand = oneLineCommand.Trim();
                         if (!oneLineCommand.Equals(""))
                         {

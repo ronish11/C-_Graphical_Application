@@ -36,9 +36,9 @@ namespace Csharp_graphical_application
         /// <summary>Runs the and execute.</summary>
         /// <param name="g">The g.</param>
         /// <param name="input">Th
-        public void run_and_execute(Graphics g, string input)
+        public Point run_and_execute(Graphics g, string input)
         {
-            /*
+
             string command = input.ToLower(); // Cirlce 50 = circle 50
 
             //drawto 50 - first element
@@ -54,7 +54,7 @@ namespace Csharp_graphical_application
                 {
 
                  MessageBox.Show("error");
-                return;
+                return new Point(x,y);
                 }
             
 
@@ -265,11 +265,11 @@ namespace Csharp_graphical_application
                 }
 
             }
+        return new Point(x, y);
         }
         //////
         ///
-        */
-        }
+
     }
 }
                

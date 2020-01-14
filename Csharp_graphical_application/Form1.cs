@@ -52,7 +52,7 @@ namespace Csharp_graphical_application
         Shape shapes;
 
 
-        public int _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10, _size11, _size12;
+        
 
         private void btn_exec_Click(object sender, EventArgs e)
         {
@@ -679,7 +679,8 @@ namespace Csharp_graphical_application
         //one
         private void button1_Click(object sender, EventArgs e)
         {
-            vobj.run_and_execute(g, textBox1.Text);
+            Point p = vobj.run_and_execute(g, textBox1.Text);
+            groupBox1.Text = "x: " + p.X + " y: " + p.Y;
         }
 
         /// <summary>Handles the Click event of the aboutToolStripMenuItem control.</summary>
@@ -749,7 +750,7 @@ namespace Csharp_graphical_application
             int count = multiline.Lines.Count();
             //foreach (var lines in multiline.Lines)
             //{
-                vobj.run_and_execute(g, multiline.Text);
+               // vobj.run_and_execute(g, multiline.Text);
             //}
         }
 
@@ -768,6 +769,11 @@ namespace Csharp_graphical_application
         private void reset(object sender, EventArgs e)
         {
             vobj.reset();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         /// <summary>Handles the Click event of the button5 control.</summary>
