@@ -64,6 +64,7 @@
     <Compile Include="Shape.cs" />
     <Compile Include="Trangle.cs" />
     <Compile Include="Validation.cs" />
+    <Compile Include="Validation1.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

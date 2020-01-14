@@ -11,6 +11,7 @@ namespace Csharp_graphical_application
 
     public class Validation
     {
+
         String[] a = { };
         /// <summary>The sobj</summary>
         Shape_Factory sobj = new Shape_Factory();
@@ -34,9 +35,10 @@ namespace Csharp_graphical_application
         }
         /// <summary>Runs the and execute.</summary>
         /// <param name="g">The g.</param>
-        /// <param name="input">The input.</param>
+        /// <param name="input">Th
         public void run_and_execute(Graphics g, string input)
         {
+            /*
             string command = input.ToLower(); // Cirlce 50 = circle 50
 
             //drawto 50 - first element
@@ -263,6 +265,10 @@ namespace Csharp_graphical_application
                 }
 
             }
+        }
+        //////
+        ///
+        */
         }
     }
 }
